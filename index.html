@@ -31,17 +31,18 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <!--  vvvvv THIS IS WHERE THE CONTENT GOES! vvvvvvv  -->
 
-## Textsammlungen erstellen und publizieren mit GitHub und Zenodo
+### Die CLiGS-textbox – Ein Modell für das Aufbauen und Bereitstellen von literarischen Textsammlungen
 <hr/>
 <br/>
 <br/>
-<small><b>Dr. Christof Schöch<br/>(Würzburg)</b></small>
+<small><b>Ulrike Henny, José Calvo, Christof Schöch</b></small>
 <br/>
 <br/>
-<small>FID-Workshop, Bonn, März 2017</small>
+<br/>
+<small>&lt;philtag n="14"/&gt;, Würzburg, März 2017</small>
 <br/>
 <br/>
-<small>Folien: http://christofs.github.io/textbox-de</small>
+<small>Folien: http://christofs.github.io/textbox-de<br/>textbox: https://github.com/cligs/textbox</small>
 <br/>
 <hr/>
 <p><img height="40" data-src="img/basics/UWUE.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="80" data-src="img/basics/CLiGS.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="40" data-src="img/basics/BMBF.jpg"></img></p>
@@ -49,26 +50,92 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 ---
 ## Überblick
-* Erstellen
-* Verwalten und Publizieren
-* Archivieren
+<br/>
+* Was ist die textbox?
+* Textauswahl
+* Textaufbereitung
+* Metadaten
+* Publikationsstrategie
+
 
 ---
-## Erstellen: TEI
+# Was ist die textbox?
 
 --
-### Basisformat: TEI
-<a href="rd1168.xml"><img src="img/tei-example.png"></img></a>
-(TEI = Text Encoding Initiative)
+### textbox
+<br/>
+* https://github.com/cligs/textbox
+* Publikationskanal für Textsammlungen der CLiGS-Gruppe
+* (kleine) Sammlungen literarischer Texte in romanischen Sprachen
+* derzeit sechs Sammlungen in drei Sprachen
+* Funktionen: Nachnutzung, Best practice, Einladung zu Feedback, Schaufenster
 
 --
-### Formate
-* Text Encoding Initiative (detaillierte Metadaten; Masterformat)
-* einfacher plain text (in UTF-8; abgeleitet)
-* linguistische Annotation (mit Freeling; in XML-Format; abgeleitet)
+### Schaufenster des Schaufensters
+<a href="http://zde.digital-humanities.de/contrast/"><img src="img/contrast.png"></img></a>
+<small>Kontrastive Visualisierung (Peter Fankhauser)</small>
+
+
 
 ---
-## Verwalten und Publizieren: GitHub
+# Textauswahl
+
+--
+### Textsammlungen
+<br/>
+* _Collection of 19th Century Spanish-American Novels (1880-1916)_
+* _Corpus of Spanish Novel from 1880-1940_
+* _Collection de nouvelles françaises du dix-neuvième siècle_
+* _Collection de romans français du dix-neuvième siècle_
+* _Collection de pièces the théâtre français du dix-septième siècle_
+* _Collection of 19th Century Portuguese Novels (1840-1910)_
+
+
+--
+### Beispiel: frz. Romane des 19. Jhdts. 
+<br/>
+* Ziel: Differenzierung von Textgruppen: Jahrzehnte und Untergattungen
+* Auswahl: drei Romane pro Jahrzehnt und Untergattung   
+* Umfang: 36 Romane und 4,4 Millionen Tokens
+* Also: nicht repräsentativ, sondern konstruierte Auswahl
+
+
+
+---
+# Textaufbereitung
+
+--
+### Textformate
+<br/>
+* Ursprung 
+	* diverse Quellen und Formate
+	* EPUB, HTML, PDF, teils auch print
+* Masterformat
+	* TEI (Schema: Subset von DTABf)
+* Abgeleitete Formate
+	* einfacher plain text (in UTF-8)
+	* annotiert (mit Freeling; in XML-Format)
+	* 'zwischenformat' (Theaterstücke)
+	* Lesefassung (PDF, Romane)
+
+--
+### Metadaten (insb.: Provenienz, keywords)
+<br/>
+<a href="img/tei-example.png"><img src="img/tei-example.png"></img></a>
+
+
+--
+## Qualitätskontrolle
+<br/>
+* heterogene Quellen diverser Qualität
+* Überprüfung: 
+	* vollständiger Text (manuell)
+	* valides XML (CLiGS-Schema)
+	* Spellcheck (pyenchant + Liste von Eigennamen, Fremdwörtern) 
+
+
+---
+# Publikationsstrategie: <br/>GitHub + Zenodo
 
 --
 ### textbox auf GitHub
@@ -76,13 +143,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 --
 ### Funktionen von Github
-* Kollaboratives Arbeiten an den Texten
+<br/>
+* Kollaboratives Bearbeiten der Texten
 * Fehler und Verbesserungen können gesammelt werden ("issues")
 * Versionierung: jede Änderung wird dokumentiert ("commits")
-* Publikation: die Texte sind frei verfügbar
-
----
-## Archivieren: Zenodo.org
+* Publikation: die Texte sind frei verfügbar (CC-0/CC_BY)
 
 --
 ### textbox auf Zenodo
@@ -90,25 +155,35 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 --
 ### Funktionen von Zenodo
+<br/>
 * Eine bestimmte Fassung ("release") der textbox wird komplett archiviert
 * Diese Fassung erhält einen persistenten Identifier (DOI); Zitierbarkeit
 * Die Daten werden langfristig verfügbar bleiben (Zenodo > OpenAire > CERN) 
 
+
+
 ---
-## Fazit
+# Fazit<br/>Die textbox - ein Modell?
 
 --
-### Die textbox - ein Modell?
-* Vorteile
-    * kollaborativ
-    * standard-basiert
-    * offen
-    * nachhaltig
-    * kostenfrei
-* Nachteile
-    * Einarbeitung
-    * GitHub.*com*
-    * evtl.: Sichtbarkeit 
+### Vorteile 
+<br/>
+* kollaborativ
+* standard-basiert
+* offen und transparent
+* leichtgewichtig
+* nachhaltig
+* zitierbar
+* kostenfrei
+
+--
+### Nachteile
+<br/>
+* Einarbeitung (...)
+* GitHub.*com* (=> wann kommt "unigit.eu"?)
+* evtl.: Sichtbarkeit (=> Nachweissysteme; <br/>siehe aber: <a href="https://www.base-search.net/Record/01c3cdfc3597e50d3f10b852bfb2597250f414d4128f5c6da9ecbe507426cb56/">BASE/Zenodo</a>, !KVK)
+
+
 
 ---
 <br/>
@@ -121,9 +196,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <br/>
 <br/>
 <br/>
-<small>Christof Schöch, 2017</small>
+<small>CLiGS, 2017</small>
 <br/>
-<small><http://www.christof-schoech.de></small>
+<small><http://cligs.hypotheses.org></small>
 <br/>
 <small><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></small>
 <br/>
