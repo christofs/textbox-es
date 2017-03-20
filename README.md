@@ -1,2 +1,2 @@
-# textbox-es
-Slides in Spanish on the textbox.
+# textbox-de
+Die CLiGS textbox
