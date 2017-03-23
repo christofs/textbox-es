@@ -31,57 +31,57 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <!--  vvvvv THIS IS WHERE THE CONTENT GOES! vvvvvvv  -->
 
-### Die CLiGS-textbox – Ein Modell für das Aufbauen und Bereitstellen von literarischen Textsammlungen
+### CLiGS-textbox – Textbox: corpus literarios entre 1830 y 1940
 <hr/>
 <br/>
 <br/>
-<small><b>Ulrike Henny, José Calvo, Christof Schöch</b></small>
+<small><b>José Calvo Tello, Ulrike Henny, Christof Schöch</b></small>
 <br/>
 <br/>
 <br/>
-<small>&lt;philtag n="14"/&gt;, Würzburg, März 2017</small>
+<small>Hispanistentag, München, Marzo 2017</small>
 <br/>
 <br/>
-<small>Folien: http://christofs.github.io/textbox-de<br/>textbox: https://github.com/cligs/textbox</small>
+<small>Diapositivas en: http://christofs.github.io/textbox-es</small>
+<small>Corpus textbox en: https://github.com/cligs/textbox</small>
 <br/>
 <hr/>
 <p><img height="40" data-src="img/basics/UWUE.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="80" data-src="img/basics/CLiGS.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="40" data-src="img/basics/BMBF.jpg"></img></p>
 
 
 ---
-## Überblick
+## Índice
 <br/>
-* Was ist die textbox?
-* Textauswahl
-* Textaufbereitung
-* Metadaten
-* Publikationsstrategie
+* ¿Qué es textbox?
+* Colecciones de texto
+* Edición de los textos
+* Estrategia de publicación
+* Resumen
 
 
 ---
-# Was ist die textbox?
+# ¿Qué es textbox?
 
 --
 ### textbox
 <br/>
+* Canal de publicación de los corpus del grupo CLiGS
 * https://github.com/cligs/textbox
-* Publikationskanal für Textsammlungen der CLiGS-Gruppe
-* (kleine) Sammlungen literarischer Texte in romanischen Sprachen
-* derzeit sechs Sammlungen in drei Sprachen
-* Funktionen: Nachnutzung, Best practice, Einladung zu Feedback, Schaufenster
+* Colecciones de textos literarios en lenguas romances
+* Actualmente seis colecciones en español, francés y portugués
+* Características: Reutilización, buenas prácticas, posibilidad de *feedback*, escaparate
 
 --
-### Schaufenster des Schaufensters
+### Escaparate del escaparate
 <a href="http://zde.digital-humanities.de/contrast/"><img src="img/contrast.png"></img></a>
-<small>Kontrastive Visualisierung (Peter Fankhauser)</small>
-
+<small>Visulización contrastiva (Peter Fankhauser)</small>
 
 
 ---
-# Textauswahl
+# Colecciones de textos
 
 --
-### Textsammlungen
+### Colecciones
 <br/>
 * _Collection of 19th Century Spanish-American Novels (1880-1916)_
 * _Corpus of Spanish Novel from 1880-1940_
@@ -92,103 +92,118 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 
 --
-### Beispiel: frz. Romane des 19. Jhdts. 
+### Collection of 19th Century Spanish-American Novels (1880-1916)
 <br/>
-* Ziel: Differenzierung von Textgruppen: Jahrzehnte und Untergattungen
-* Auswahl: drei Romane pro Jahrzehnt und Untergattung   
-* Umfang: 36 Romane und 4,4 Millionen Tokens
-* Also: nicht repräsentativ, sondern konstruierte Auswahl
+* Objetivo: Corpus de comparación para análisis estilométricos
+* Seleccion: tres novelas de ocho autores de Argentina y México
+* Tamaño: 24 novelas, 1.1 millones de tokens
+* Autores: Bunge, Cambaceres, Cuéllar, Frías, Gutiérrez, Holmberg, Holmberg, Sicardi
 
+--
+### Corpus of Spanish Novel from 1880-1940 
+<br/>
+* Objetivo: Corpus de comparación para análisis estilométricos
+* Seleccion: tres novelas de ocho autores españoles
+* Tamaño: 24 novelas, 1.8 millones de tokens
+* Autores: Galdós, Blasco Ibáñez, Miró, Bazán, Clarín, Pereda
+
+---
+# Edición de los textos
+
+--
+### Formatos
+<br/>
+* Origen 
+	* Diversas fuentes y formatos
+	* EPUB, HTML, PDF, impreso
+	* Conversión mediante programas Python
+* Maestro
+	* XML-TEI
+* Derivados
+	* texto plano (UTF-8)
+	* version anotada linguisticamente (con Freeling, en formato XML)
+	* 'zwischenformat' (obras de teatro)
+	* Version de lectura (PDF, novelas)
+
+--
+### Texto en XML-TEI
+<br/>
+<a href="img/xml-tei.png"><img src="img/xml-tei.png"></img></a>
+
+
+--
+### Metadatos en XML-TEI
+<br/>
+<a href="img/metadata-tei.png"><img src="img/metadata-tei.png"></img></a>
+
+
+--
+### Metadatos, estructura y anotación en XML
+<br/>
+<a href="img/anotacion.png"><img src="img/anotacion.png"></img></a>
+	
+
+--
+### Metadatos en CSV
+<br/>
+<a href="img/tei-example.png"><img src="img/metadata-csv.png"></img></a>
+
+--
+## Control de calidad
+<br/>
+* Fuentes heterogeneas de diversa calidad
+* Revision: 
+	* texto completo (manual)
+	* XML bien formado y validado (CLiGS-Schema)
+	* Spellcheck (corrector en Python + lista de nombres propios, extranjerismos) 
 
 
 ---
-# Textaufbereitung
+# Estrategias de publicacion: <br/>GitHub + Zenodo
 
 --
-### Textformate
-<br/>
-* Ursprung 
-	* diverse Quellen und Formate
-	* EPUB, HTML, PDF, teils auch print
-* Masterformat
-	* TEI (Schema: Subset von DTABf)
-* Abgeleitete Formate
-	* einfacher plain text (in UTF-8)
-	* annotiert (mit Freeling; in XML-Format)
-	* 'zwischenformat' (Theaterstücke)
-	* Lesefassung (PDF, Romane)
-
---
-### Metadaten (insb.: Provenienz, keywords)
-<br/>
-<a href="img/tei-example.png"><img src="img/tei-example.png"></img></a>
-
-
---
-## Qualitätskontrolle
-<br/>
-* heterogene Quellen diverser Qualität
-* Überprüfung: 
-	* vollständiger Text (manuell)
-	* valides XML (CLiGS-Schema)
-	* Spellcheck (pyenchant + Liste von Eigennamen, Fremdwörtern) 
-
-
----
-# Publikationsstrategie: <br/>GitHub + Zenodo
-
---
-### textbox auf GitHub
+### textbox en GitHub
 <a href="https://github.com/cligs/textbox"><img src="img/textbox-home.png"></img></a>
 
 --
-### Funktionen von Github
+### Funciones de Github
 <br/>
-* Kollaboratives Bearbeiten der Texten
-* Fehler und Verbesserungen können gesammelt werden ("issues")
-* Versionierung: jede Änderung wird dokumentiert ("commits")
-* Publikation: die Texte sind frei verfügbar (CC-0/CC_BY)
+* Edicion colaborativa de los textos
+* Posibilidad de comunicacion de errores o sugerencias ("issues")
+* Control de versiones: cada cambio es versionado ("commits")
+* Publicacion: los textos estan son accesibles libremente (CC-0/CC_BY)
 
 --
-### textbox auf Zenodo
+### textbox en Zenodo
 <a href="https://zenodo.org/record/376666"><img src="img/textbox-zenodo.png"></img></a>
 
 --
-### Funktionen von Zenodo
+### Funciones de Zenodo
 <br/>
-* Eine bestimmte Fassung ("release") der textbox wird komplett archiviert
-* Diese Fassung erhält einen persistenten Identifier (DOI); Zitierbarkeit
-* Die Daten werden langfristig verfügbar bleiben (Zenodo > OpenAire > CERN) 
-
+* Una version concreta ("release") y completa de textbox es archivada
+* Esta version está identificada de manera unívoca (DOI); citable
+* Datos accesibles a largo plazo (Zenodo > OpenAire > CERN) 
 
 
 ---
-# Fazit<br/>Die textbox - ein Modell?
+# Resumen<br/>
 
 --
-### Vorteile 
+### Características
 <br/>
-* kollaborativ
-* standard-basiert
-* offen und transparent
-* leichtgewichtig
-* nachhaltig
-* zitierbar
-* kostenfrei
-
---
-### Nachteile
-<br/>
-* Einarbeitung (...)
-* GitHub.*com* (=> wann kommt "unigit.eu"?)
-* evtl.: Sichtbarkeit (=> Nachweissysteme; <br/>siehe aber: <a href="https://www.base-search.net/Record/01c3cdfc3597e50d3f10b852bfb2597250f414d4128f5c6da9ecbe507426cb56/">BASE/Zenodo</a>, !KVK)
-
+* 6 colecciones literarias de lenguas romances
+* 2 colecciones de literatura en español
+* Diferentes formatos (investigación y lectura)
+* Colaborativo, abierto y transparente
+* Sostenible y citable
+* Gratuito
+* Futuras versiones
 
 
 ---
 <br/>
 <br/>
-## Vielen Dank! 
+## ¡Gracias por la atención! 
 <br/>
 <br/>
 <br/>
