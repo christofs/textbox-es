@@ -1,2 +1,2 @@
-# textbox-de
-Die CLiGS textbox
+# textbox-es
+Textbox de CLiGS
